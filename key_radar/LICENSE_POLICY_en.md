@@ -10,13 +10,23 @@ This document supplements [Terms of Service](./TERMS_en.md) §4 / §5 / §6. The
 |---|---|
 | Launch primary model | One-time purchase USD $24.99 |
 | Monthly subscription (alternative) | USD $3.99/month (when enabled) |
-| Launch discount | LAUNCH20 / 20% off / first 200 redemptions |
+| Launch discount | LAUNCH20 / 20% off / first 150 customers (discounted result ≈ USD $19.99 — list price stays $24.99) |
 | Payment processor | Polar (Merchant of Record) |
 | License key issuance | Automatically issued by Polar immediately after payment |
 | Activation limit | **2 devices** |
 | Update entitlement | **2 years** from license issuance |
 | Refund window | **7 days** from purchase |
 | Transfer / sharing | Prohibited |
+
+## Pricing convention (applies to both KeyRadar and Scrap Relay)
+- **The list price is USD $24.99 only.** $19.99 is not the list price — it is the approximate result after applying the LAUNCH20 discount.
+- Avoid the following phrasings on stores, landing pages, policies, or marketing copy:
+  - "Price: $19.99"
+  - "Launch price: $19.99"
+- Recommended phrasings:
+  - English: "$24.99 one-time purchase. Launch offer: 20% off for the first 150 customers."
+  - 한국어: "1회성 구매 가격은 $24.99입니다. 출시 프로모션으로 선착순 150명에게 20% 할인이 제공될 수 있습니다."
+- The same rule applies to both KeyRadar and Scrap Relay (same list price $24.99, same code LAUNCH20, same 150-customer cap).
 
 ## Activation and device management
 - License keys are activated by the user from within the KeyRadar app or via the Polar Customer Portal.

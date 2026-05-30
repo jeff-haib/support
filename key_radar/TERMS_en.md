@@ -3,8 +3,6 @@
 **Effective date:** 2026-05-30 (draft)
 **Version:** 0.3 (operator info confirmed + finalized values, pre-legal-review)
 
-> ⚠️ Pre-legal-review draft. Have qualified counsel in your jurisdictions review it before public release.
-
 ## 1. Acceptance
 By installing or running KeyRadar you are deemed to accept these Terms. If you do not accept them, do not use KeyRadar.
 

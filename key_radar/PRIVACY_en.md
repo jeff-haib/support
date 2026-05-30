@@ -3,8 +3,6 @@
 **Effective date:** 2026-05-30 (draft)
 **Version:** 0.3 (operator info confirmed, pre-legal-review)
 
-> ⚠️ Pre-legal-review draft. Have qualified counsel review for GDPR, CCPA, and other applicable laws before public release.
-
 ## One-line summary
 KeyRadar does not transmit your **API keys, vault contents, project files, or workspace contents** to the operator (HAIB) or to the payment processor (Polar). However, minimal license-related information is processed for paid-license activation and trial management (see §4).
 
