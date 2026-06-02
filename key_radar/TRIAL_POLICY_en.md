@@ -1,45 +1,39 @@
-# KeyRadar Free Trial Policy
+# KeyRadar Trial Policy v0.5
 
-**Version 0.3** · 2026-05-30 (synced with operator info confirmation)
+> v0.5 (2026-06-03): User-created vault password removed. Vault identity clarified (local organization and monitoring store, not a secure safe). Automatic verification is limited to while the app is running. Aligned with policy v0.9.4.
 
-This document supplements [Terms of Service](./TERMS_en.md) §3. The Terms prevail in case of conflict.
+This document supplements [Terms of Service](./TERMS_en.md). The Terms prevail in case of conflict.
 
-## At a glance
+## 1. Trial Period
 
-| Item | Detail |
-|---|---|
-| Default trial period | **3 days** (from install) |
-| If prior install is detected | Shortened to **1 day** |
-| Trial record storage | Local on user's device only |
-| Transmission to operator | **None** |
-| After trial | Some features restricted; lifted by purchasing a license |
+A *3-day* free trial automatically starts on first launch. Users do not need to opt in to start the trial.
 
-## How the trial works
-- All features are available for 3 days starting from the first launch after install.
-- The trial start date and prior-install markers are stored only in KeyRadar's local app area.
-- The Operator (HAIB) does not run any server involved in the trial flow.
+## 2. Trial Access
 
-## Conditions for 1-day shortening
-- If markers of a prior KeyRadar installation are detected on the same device, the trial is shortened to 1 day.
-- This is a partial measure to deter repeated trial abuse.
+During the trial, all features are accessible identically to a Pro license holder.
 
-## Limits (honest disclosure)
-This trial-limit mechanism is based on local markers and **is not perfect.** It may be bypassed by:
-- OS reinstall
-- Device change
-- User-account change
-- Manual deletion of local markers
+## 3. After Trial Expiration
 
-By the Terms §7.5, users agree not to intentionally circumvent these measures.
+If 3 days pass without a license purchase:
+- The app transitions to the Expired state.
+- Vault access is blocked, and all menus are covered by a dimmed overlay.
+- Registered key data remains on disk. Access is restored immediately upon license purchase.
+- Only the purchase button (top-right of the topbar) remains active.
 
-## After trial expiration
-- After the trial ends, some KeyRadar features will be restricted.
-- Purchasing a license (see [Licensing Policy](./LICENSE_POLICY_en.md)) restores full functionality.
-- Data collected and stored during the trial (vault, refs, logs, etc.) is preserved after trial expiration — you can resume immediately after purchase.
+## 4. Trial Bypass Prevention
 
-## Future changes
-- The trial is currently handled by app-internal local logic. If Polar's trial features or an operator-operated verification server are introduced later, this policy will be updated and disclosed in advance.
+KeyRadar stores the trial start time in a local file (`license_meta.json`) with HMAC signature. The file is tamper-evident, but a user who completely deletes the vault directory and reinstalls the app can restart the trial.
 
-## Changelog
-- v0.3 (2026-05-30): Synced with package-wide v0.3. No content change to this document.
-- v0.2 (2026-05-30): Trial stated as app-local logic; operator server non-involvement stated; bypass risk honestly disclosed.
+This is an intentional policy:
+- No device identifier tracking (privacy minimization policy alignment)
+- No additional permissions like iCloud required
+- Operates entirely within the App Sandbox
+
+The 3-day trial length itself creates an unreasonable friction cost for reinstall-based bypass attempts.
+
+## 5. Trial Notifications
+
+The following notifications are shown:
+- On first launch: "Your 3-day free trial has started" modal
+- 1 day before expiration: Toast notification
+- At expiration: Purchase modal automatically displayed

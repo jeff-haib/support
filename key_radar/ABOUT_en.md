@@ -1,7 +1,7 @@
 # About KeyRadar
 
 > This document is informational, not legal. For legally binding terms see [Terms of Service](./TERMS_en.md); for personal-data handling see the [Privacy Policy](./PRIVACY_en.md).
-> **Version 0.3** (operator information confirmed + finalized prices/period)
+> **Version 0.5** (2026-06-03): User-created vault password removed. Vault identity clarified (local organization and monitoring store, not a secure safe). Automatic verification is limited to while the app is running. Aligned with policy v0.9.4.
 
 ## One-line summary
 KeyRadar collects the API keys that AI coding tools scatter across your machine, then watches and records how they're used. It does not block.
@@ -9,7 +9,7 @@ KeyRadar collects the API keys that AI coding tools scatter across your machine,
 ## Why it exists
 AI coding agents (Cursor, Claude Code, Copilot, and others) create `.env` files, ask for keys, or generate new ones project by project. The result is API keys spread across your PC. It becomes hard to know which key lives where, which keys still work, and which key suddenly started burning cost last week.
 
-KeyRadar is a desktop tool that **collects those scattered keys locally**, **shows their state and usage at a glance**, and **flags anomalies**.
+KeyRadar is a desktop tool that **collects those scattered keys locally**, **shows their state and usage at a glance**, and **flags anomalies**. KeyRadar is an *AI provider API operations dashboard*. It helps you discover, manage, verify, and monitor API keys scattered across AI services-all locally. It is not a password manager or vault replacement.
 
 ## What it does
 - Scans folders you pick for `.env`-style files and shows candidates.
@@ -21,16 +21,25 @@ KeyRadar is a desktop tool that **collects those scattered keys locally**, **sho
 
 ## What it does not do (honest limits)
 - **No cloud sync of your data.** Your API keys, vault contents, and project files are never transmitted to the operator's servers.
-- **No accounts or signup.** Core key-management features work without an account. (Paid-license activation does involve Polar — see [Privacy](./PRIVACY_en.md).)
-- **It does not block usage.** KeyRadar is a turnstile, not a gate — it *records* who did what, but does not control who is allowed (that belongs to the OS and to you).
+- **No KeyRadar account or signup.** Core key-management features work without a KeyRadar account. Mac App Store purchases are handled through Apple In-App Purchase.
+- **It does not block usage.** KeyRadar is a turnstile, not a gate — it *records* who did what, but does not control who is allowed.
 - **It cannot stop billing.** What happens inside a provider's payment system is outside its API and outside KeyRadar's reach. Its job is to alert you to rapid burn quickly enough that you can revoke or cap from the provider's console yourself.
-- **No backdoor recovery.** If you forget your master password, your vault cannot be opened. This is evidence that the lock is real — and also a real risk. We strongly recommend creating an encrypted export backup at the moment you set the password.
+- **Not a password manager.** The vault is a local organization and monitoring store. It is automatically available while the app is running and automatically locked when the app closes.
 
-## Free trial and purchase
-- **3-day free trial** — full features for 3 days after install. Trial records are stored only on your device (fully local). If KeyRadar detects traces of a prior installation on the same device, the trial is shortened to 1 day (abuse mitigation). This detection is not perfect and may be bypassed by OS reinstall or device change — stated honestly here.
-- **One-time purchase** — not a subscription. A single purchase issues a license key and entitles you to updates for a defined period (see [Terms](./TERMS_en.md)).
-- **Activation on up to 2 devices** — your license key may be activated on at most 2 devices. You can deactivate and re-register devices yourself through the Polar Customer Portal.
-- **Payment processing** — Polar (merchant of record) handles payment and license issuance.
+## Pricing
+| Plan | Price |
+|---|---|
+| Lifetime (one-time) | $34.99 |
+| Monthly subscription | $3.99 / month |
+| Annual subscription | $29.99 / year |
+
+A 3-day free trial starts automatically on first launch.
+
+## Trial and purchase
+- **Trial** — all features are available for 3 days from first launch.
+- **Expired** — after the trial ends without purchase, vault access is blocked and menus are covered by a dimmed overlay. Registered key data remains on disk and is restored immediately after purchase.
+- **Pro** — after purchase, all core features are available without restriction.
+- **Payment processing** — Mac App Store purchases are processed by Apple In-App Purchase. Refunds and cancellations follow Apple App Store policies.
 
 ## Security model summary
 - **At rest:** always encrypted. Plaintext keys never sit on disk.
@@ -38,8 +47,8 @@ KeyRadar is a desktop tool that **collects those scattered keys locally**, **sho
 - **At supply (the weak link):** plaintext exists briefly. We minimize the exposure window with automatic `.gitignore`, timeout deletion, crash cleanup, and a full audit log.
 - **In transit (between your PCs):** the vault is duplicated while still encrypted. We do not produce plaintext USB exports.
 
-## The unattended-automation limit (important)
-Modern AI agents run when you are not at the keyboard. To avoid blocking that automation, KeyRadar must allow the lock to open automatically (in Always-open mode, or during a session while session-lock is unlocked). **In that state, KeyRadar's encryption protects against off-device leakage but not against things that already have access to your machine.** We do not hide this limit — keeping it secret would be the dangerous choice.
+## The while-app-is-running limit (important)
+Automatic verification and monitoring work only while the app is running. KeyRadar v1 does not provide a background resident process or LaunchAgent. When you close the app, automatic verification stops. We do not hide this limit.
 
 ## License and scope of responsibility
 KeyRadar is a tool you use at your own discretion and risk. KeyRadar does not promise to block billing, prevent payment, or guarantee 100% prevention of key leakage. See [Terms of Service](./TERMS_en.md) for the full limitation of liability.
