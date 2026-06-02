@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KeyRadar Support</title>
+  <meta name="description" content="KeyRadar support, legal, privacy, license, and trial policy documents.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0f1318;
+      --panel: #171c22;
+      --text: #eef2f6;
+      --muted: #a7b0bc;
+      --line: #2c3440;
+      --accent: #7fb2ff;
+      --accent-strong: #9ec6ff;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f6f8fb;
+        --panel: #ffffff;
+        --text: #17202a;
+        --muted: #5d6977;
+        --line: #dce3eb;
+        --accent: #1457b8;
+        --accent-strong: #0b3f8a;
+      }
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0 72px;
+    }
+    header {
+      margin-bottom: 28px;
+    }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 6vw, 56px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+    .lead {
+      max-width: 720px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+      margin-top: 18px;
+    }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .summary div {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .summary strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+    .summary span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    h2 {
+      margin: 0 0 14px;
+      font-size: 20px;
+    }
+    .docs {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .docs a {
+      display: block;
+      min-height: 92px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .docs a:hover {
+      border-color: var(--accent);
+    }
+    .docs strong {
+      display: block;
+      color: var(--accent-strong);
+      margin-bottom: 5px;
+    }
+    .docs span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    footer {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    footer a {
+      color: var(--accent-strong);
+    }
+    @media (max-width: 720px) {
+      main {
+        padding-top: 34px;
+      }
+      .summary,
+      .docs {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">KeyRadar Support</p>
+      <h1>Legal, privacy, and license documents</h1>
+      <p class="lead">
+        KeyRadar is an AI provider API operations dashboard. It helps you discover,
+        manage, verify, and monitor API keys locally. It is not a password manager
+        or vault replacement.
+      </p>
+    </header>
+
+    <section class="summary" aria-label="Key policy summary">
+      <div>
+        <strong>Local first</strong>
+        <span>API keys, vault contents, and project files do not go to HAIB servers.</span>
+      </div>
+      <div>
+        <strong>App-running scope</strong>
+        <span>Automatic verification and monitoring run only while KeyRadar is open.</span>
+      </div>
+      <div>
+        <strong>Mac App Store</strong>
+        <span>Purchases are handled through Apple In-App Purchase.</span>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="english-docs">
+      <h2 id="english-docs">English</h2>
+      <ul class="docs">
+        <li><a href="./ABOUT_en.md"><strong>About</strong><span>Product summary, honest limits, pricing, and operator information.</span></a></li>
+        <li><a href="./TERMS_en.md"><strong>Terms of Service</strong><span>Use terms, trial, license states, vault storage, and limitations.</span></a></li>
+        <li><a href="./PRIVACY_en.md"><strong>Privacy Policy</strong><span>Local data model, outbound network scope, payment data flow.</span></a></li>
+        <li><a href="./LICENSE_POLICY_en.md"><strong>License Policy</strong><span>Plan types, activation, device count, transfer, refunds.</span></a></li>
+        <li><a href="./TRIAL_POLICY_en.md"><strong>Trial Policy</strong><span>3-day trial, expired state, bypass prevention, notifications.</span></a></li>
+      </ul>
+    </section>
+
+    <section class="panel" aria-labelledby="korean-docs">
+      <h2 id="korean-docs">한국어</h2>
+      <ul class="docs">
+        <li><a href="./ABOUT_ko.md"><strong>소개</strong><span>제품 요약, 정직한 한계, 가격, 운영자 정보.</span></a></li>
+        <li><a href="./TERMS_ko.md"><strong>이용약관</strong><span>사용 조건, 트라이얼, 라이선스 상태, vault 저장, 책임 한계.</span></a></li>
+        <li><a href="./PRIVACY_ko.md"><strong>개인정보 처리방침</strong><span>로컬 데이터 모델, 외부 통신 범위, 결제 데이터 흐름.</span></a></li>
+        <li><a href="./LICENSE_POLICY_ko.md"><strong>라이선스 정책</strong><span>플랜 종류, 활성화, 기기 수, 양도, 환불.</span></a></li>
+        <li><a href="./TRIAL_POLICY_ko.md"><strong>트라이얼 정책</strong><span>3일 체험, 만료 상태, 우회 방어, 알림.</span></a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <span>Version: legal docs v0.5, aligned with KeyRadar policy v0.9.4.</span>
+      <br>
+      <a href="https://github.com/jeff-haib/support/tree/main/key_radar">View source on GitHub</a>
+    </footer>
+  </main>
+</body>
+</html>
