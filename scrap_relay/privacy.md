@@ -1,6 +1,6 @@
 # Privacy Policy — HAIB Scrap Relay
 
-_Last updated: 2026-05-26_
+_Last updated: 2026-06-01_
 
 HAIB Scrap Relay ("the Extension," "we," "us") is a browser extension that helps you scrap, annotate, and relay content across AI tools. This policy explains what we do — and more importantly, what we do **not** do — with your data.
 
@@ -26,11 +26,14 @@ Specifically, the Extension does **not** collect, transmit, or store on any serv
 
 ## 2. Where Your Data Lives
 
-All data created or captured by the Extension is stored **locally on your own device**, using your browser's local storage (IndexedDB and extension storage).
+All data created or captured by the Extension is stored **locally on your own device**, in two places:
 
-- Your scraps, annotations, groups, and settings never leave your device unless **you** explicitly export them (e.g., saving a file to your Downloads folder).
+- **Browser storage** (IndexedDB and extension storage) — for in-app data (scraps, annotations, groups, settings).
+- **Your local disk** — each scrap is automatically saved as an HTML file in `Downloads/ScrapRelay/` so the file is yours to keep, move, or delete as you wish.
+
+- Your scraps, annotations, groups, and settings never leave your device. They are not sent to any server we operate.
 - We cannot see, access, or recover your data. It is yours alone.
-- If you uninstall the Extension, your local data is removed by the browser.
+- If you uninstall the Extension, the in-app data stored by the browser is removed by the browser. Files already saved to your Downloads folder remain on disk — you can keep or delete them yourself.
 
 ---
 
@@ -40,7 +43,7 @@ There are only a few cases, and each happens **only on your explicit action**:
 
 1. **Relay** — When you choose to relay content, the Extension inserts text into the input field of an AI page (Claude, ChatGPT, or Gemini) that you have open. The content goes to that AI provider under their own terms — not to us.
 
-2. **Exports** — When you export or "bake" a file, it is saved to your local Downloads folder. Nothing is uploaded.
+2. **Local file saves** — When you capture a scrap, the Extension automatically saves an HTML copy to your local Downloads folder (`Downloads/ScrapRelay/`). The file stays on your device. Nothing is uploaded.
 
 3. **Pro license (if you purchase Pro)** — License activation and validation send your license key to our payment provider, **Polar** (see Section 5). This does not include any of your scrap content.
 
@@ -55,7 +58,7 @@ We do **not** auto-submit anything to AI providers. You always review and send m
 - **activeTab / scripting** — to capture content and insert relayed prompts, only when you click to do so.
 - **tabs** — to detect whether a supported AI tab is open before relaying (we only read tab URLs to match supported domains; no history is collected).
 - **contextMenus** — to provide right-click "Scrap" / "Annotate" options.
-- **downloads** — to save exported files to your Downloads folder, only when you export.
+- **downloads** — to save each scrap as an HTML file to your local Downloads folder (`Downloads/ScrapRelay/`). Saving happens automatically when you capture, so the file stays on your disk for you to keep, move, or delete.
 
 The Extension accesses only these AI sites: **Claude (claude.ai), ChatGPT (chatgpt.com / chat.openai.com), and Gemini (gemini.google.com).** It never requests access to all websites.
 
